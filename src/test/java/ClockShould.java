@@ -8,7 +8,7 @@ import static org.junit.Assert.assertThat;
 public class ClockShould {
 
     @Test
-    public void formatTodaysDate(  ) {
+    public void formatTodaysDate() {
         Clock clock = new TestableClock();
 
         String date = clock.todayAsddmmyyyyString();

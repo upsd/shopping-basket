@@ -11,7 +11,7 @@ import static org.mockito.Mockito.verify;
 public class BasketShould {
     
     @Test
-    public void peristProducts(  ) {
+    public void peristProducts() {
         Basket myBasket = new Basket(new Clock());
 
         List<Product> productsToAdd = asList(new Product(new ProductId("10001"), "Some product", 10));

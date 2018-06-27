@@ -29,7 +29,7 @@ public class ShoppingBasketFeature {
     }
 
     @Test
-    public void canAddProductToShoppingBasket(  ) {
+    public void canAddProductToShoppingBasket() {
         UserId userId = new UserId("1");
 
         shoppingBasketService.addItem(userId, breakingBad.id(), 2);
@@ -44,7 +44,7 @@ public class ShoppingBasketFeature {
     }
 
     @Test
-    public void cannotAddInvalidProductsToBasket(  ) {
+    public void cannotAddInvalidProductsToBasket() {
         UserId userId = new UserId("1");
         ProductId productId = new ProductId("this id does not belong to a product");
 
@@ -56,7 +56,7 @@ public class ShoppingBasketFeature {
     }
 
     @Test
-    public void canCalculateTotalCorrectly(  ) {
+    public void canCalculateTotalCorrectly() {
         UserId userId = new UserId("1");
 
         shoppingBasketService.addItem(userId, theHobbit.id(), 2);
@@ -68,7 +68,7 @@ public class ShoppingBasketFeature {
     }
 
     @Test
-    public void eachUserHasTheirOwnBasket(  ) {
+    public void eachUserHasTheirOwnBasket() {
         UserId aUser = new UserId("1");
         UserId aDifferentUser = new UserId("2");
 

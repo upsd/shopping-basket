@@ -18,14 +18,14 @@ public class InMemoryProductRepositoryShould {
     }
 
     @Test
-    public void getAProductById(  ) {
+    public void getAProductById() {
         Optional<Product> productFound = productRepository.get(new ProductId("10001"));
 
         assertEquals("The Hobbit", productFound.get().description());
     }
 
     @Test
-    public void returnAnEmptyOptionalIfNoSuchProductExists(  ) {
+    public void returnAnEmptyOptionalIfNoSuchProductExists() {
         Optional<Product> productFound = productRepository.get(new ProductId("no product has this id"));
 
         assertEquals(Optional.empty(), productFound);
